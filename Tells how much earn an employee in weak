@@ -1,0 +1,26 @@
+hourss = int(input("Enter the no. of hours\n hours="))
+
+if 1 <= hourss <= 40:
+    pay = hourss * 5
+    works = input("Did you work on the weekend (y/n) = ")
+    
+    if works == "y":
+        days = int(input("days on weekend \n days="))
+        print("Total pay = ", pay + (days * 25), " dollars")
+    else:
+        print("money =", pay, "dollars")
+elif hourss > 40:
+    pay = ((hourss - 40) * 10) + 200
+    works = input("Did you work on the weekend (y/n) = ")
+    
+    if works == "y":
+        days = int(input("days on weekend \n days="))
+        print("Total pay = ", pay + (days * 25), " dollars")
+    else:
+        print("money =", pay, "dollars")
+elif hourss < 0:
+    print("input is incorrect")
+elif hourss == 0:
+    print('no money made')
+else:
+    print("Wrong entry!")
